@@ -106,7 +106,7 @@
     position: absolute; inset: 0;
     background:
       linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.3) 100%),
-      url('hero.jpg') center/cover no-repeat;
+      url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover no-repeat;
     transform: scale(1.05);
     animation: heroZoom 12s ease-out forwards;
   }
@@ -727,7 +727,6 @@
     cursor: pointer; background: none; border: none;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 2px;
-    z-index: 9001; /* Garante que o X fique sempre por cima do vídeo */
   }
 
   /* ANIMATE ON SCROLL */
@@ -798,9 +797,11 @@
 </head>
 <body>
 
+<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
+<!-- MOBILE NAV OVERLAY -->
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" onclick="closeMobileNav()">✕ FECHAR</button>
   <a href="#sobre" onclick="closeMobileNav()">Sobre</a>
@@ -811,6 +812,7 @@
   <a href="#contato" onclick="closeMobileNav()">Contato</a>
 </div>
 
+<!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="logo">Personal<span>.</span>Adventure<br><span style="font-size:14px;letter-spacing:8px;color:rgba(245,240,232,0.5)">INTELLIGENCE</span></a>
   <ul class="nav-links">
@@ -826,6 +828,7 @@
   </div>
 </nav>
 
+<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
@@ -844,6 +847,7 @@
   </div>
 </section>
 
+<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-inner" id="tickerInner">
     <span class="ticker-item">Tour de Moto</span><span class="ticker-dot">✦</span>
@@ -863,11 +867,12 @@
   </div>
 </div>
 
+<!-- SOBRE -->
 <section id="sobre">
   <div class="sobre-grid">
     <div class="sobre-img-wrap reveal-left">
       <div class="sobre-img-deco"></div>
-      <img src="sobre.jpg" alt="Personal Adventure" class="sobre-img">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Personal Adventure" class="sobre-img">
       <div class="sobre-img-deco2"></div>
       <div class="sobre-badge">
         <div class="sobre-badge-num">10+</div>
@@ -913,6 +918,7 @@
   </div>
 </section>
 
+<!-- SERVIÇOS -->
 <section id="servicos">
   <div class="servicos-wrap">
     <div class="servicos-header reveal">
@@ -958,6 +964,7 @@
   </div>
 </section>
 
+<!-- GALERIA -->
 <section id="galeria">
   <div class="galeria-wrap">
     <div class="galeria-header reveal">
@@ -969,33 +976,34 @@
     </div>
     <div class="galeria-grid">
       <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="galeria1.jpg" alt="Galeria 1">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Tour de moto">
         <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
       </div>
       <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="galeria2.jpg" alt="Galeria 2">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Massoterapia">
         <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
       </div>
       <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="galeria3.jpg" alt="Galeria 3">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Manicure">
         <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
       </div>
       <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="galeria4.jpg" alt="Galeria 4">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Paisagem">
         <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
       </div>
       <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="galeria5.jpg" alt="Galeria 5">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900&q=80" alt="Serra">
         <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
       </div>
       <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="galeria6.jpg" alt="Galeria 6">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&q=80" alt="Estrada">
         <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- VIDEOS -->
 <section id="videos">
   <div class="videos-wrap">
     <div class="videos-header reveal">
@@ -1003,56 +1011,36 @@
       <h2 class="section-title">Nossos <em>Vídeos</em></h2>
     </div>
     <div class="videos-grid">
-      
-      <div class="video-thumb" onclick="openVideoModal('video1.mp4')">
-        <img src="capa-video1.jpg" alt="Capa Video 1" class="video-bg">
+      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Tour Brasil" class="video-bg">
         <div class="video-play-btn">▶</div>
         <div class="video-info">
-          <h3>Vídeo de Ação 1</h3>
-          <span>Tour de Moto</span>
+          <h3>Tour Chapada dos Veadeiros 2024</h3>
+          <span>Tour de Moto · 12 min</span>
         </div>
       </div>
-
-      <div class="video-thumb" onclick="openVideoModal('video3.mp4')">
-        <img src="capa-video3.jpg" alt="Capa Video 3" class="video-bg">
+      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80" alt="Massagem" class="video-bg">
         <div class="video-play-btn">▶</div>
         <div class="video-info">
-          <h3>Vídeo de Ação 3</h3>
-          <span>Experiência</span>
+          <h3>Massoterapia Terapêutica</h3>
+          <span>Bem-Estar · 5 min</span>
         </div>
       </div>
-
-      <div class="video-thumb" onclick="openVideoModal('video4.mp4')">
-        <img src="capa-video4.jpg" alt="Capa Video 4" class="video-bg">
+      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=80" alt="Nail Art" class="video-bg">
         <div class="video-play-btn">▶</div>
         <div class="video-info">
-          <h3>Vídeo de Ação 4</h3>
-          <span>Aventura</span>
+          <h3>Nail Art Exclusiva</h3>
+          <span>Beleza · 4 min</span>
         </div>
       </div>
-
-      <div class="video-thumb" onclick="openVideoModal('video5.mp4')">
-        <img src="capa-video5.jpg" alt="Capa Video 5" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Vídeo de Ação 5</h3>
-          <span>Natureza</span>
-        </div>
-      </div>
-
-      <div class="video-thumb" onclick="openVideoModal('video6.mp4')">
-        <img src="capa-video6.jpg" alt="Capa Video 6" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Vídeo de Ação 6</h3>
-          <span>Liberdade</span>
-        </div>
-      </div>
-
     </div>
+    <p style="margin-top:24px; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:3px; color:rgba(245,240,232,0.3); text-transform:uppercase;">— Espaço para novos vídeos futuros —</p>
   </div>
 </section>
 
+<!-- PRODUTOS -->
 <section id="produtos">
   <div class="produtos-wrap">
     <div class="produtos-header reveal">
@@ -1145,6 +1133,7 @@
   </div>
 </section>
 
+<!-- DEPOIMENTOS -->
 <section id="depoimentos">
   <div class="dep-bg"></div>
   <div class="dep-wrap">
@@ -1175,6 +1164,7 @@
   </div>
 </section>
 
+<!-- CTA CONTATO -->
 <section id="contato">
   <p class="section-label">Fale comigo</p>
   <h2 class="section-title">Pronto para a sua<br><em>próxima aventura?</em></h2>
@@ -1185,6 +1175,7 @@
   </a>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1225,19 +1216,22 @@
   </div>
 </footer>
 
+<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/5511919219193?text=Olá! Vim pelo site Personal Adventure Intelligence e gostaria de mais informações." target="_blank" class="float-wa" title="Fale pelo WhatsApp">
   <span class="float-wa-label">Fale comigo!</span>
   💬
 </a>
 
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">✕ FECHAR</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
+<!-- VIDEO MODAL -->
 <div class="lightbox" id="videoModal">
   <button class="lightbox-close" onclick="closeVideoModal()">✕ FECHAR</button>
-  <video id="videoFrame" width="900" height="506" controls style="max-width:90vw;max-height:80vh; outline:none; background:#000;"></video>
+  <iframe id="videoFrame" width="900" height="506" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="max-width:90vw;max-height:80vh"></iframe>
 </div>
 
 <script>
@@ -1292,18 +1286,14 @@ document.getElementById('lightbox').addEventListener('click', function(e) {
   if (e.target === this) closeLightbox();
 });
 
-// VIDEO MODAL (NOVO SCRIPT PARA VÍDEOS LOCAIS)
+// VIDEO MODAL
 function openVideoModal(url) {
-  const videoElement = document.getElementById('videoFrame');
-  videoElement.src = url;
+  document.getElementById('videoFrame').src = url + '?autoplay=1';
   document.getElementById('videoModal').classList.add('open');
-  videoElement.play(); // Inicia o vídeo automaticamente ao abrir
 }
 function closeVideoModal() {
-  const videoElement = document.getElementById('videoFrame');
   document.getElementById('videoModal').classList.remove('open');
-  videoElement.pause(); // Pausa o vídeo ao fechar
-  videoElement.src = ''; // Limpa o carregamento
+  document.getElementById('videoFrame').src = '';
 }
 document.getElementById('videoModal').addEventListener('click', function(e) {
   if (e.target === this) closeVideoModal();
