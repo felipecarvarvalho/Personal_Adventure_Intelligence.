@@ -104,10 +104,9 @@
   }
   .hero-bg {
     position: absolute; inset: 0;
-    /* FOTO DA CAPA AQUI */
     background:
       linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.3) 100%),
-      url('img/capa.jpg') center/cover no-repeat;
+      url('capa.jpg') center/cover no-repeat;
     transform: scale(1.05);
     animation: heroZoom 12s ease-out forwards;
   }
@@ -205,10 +204,6 @@
   @keyframes scrollPulse {
     0%,100% { opacity: 1; transform: scaleY(1); }
     50% { opacity: 0.4; transform: scaleY(0.6); }
-  }
-  .hero-stats {
-    position: absolute; bottom: 80px; right: 48px; z-index: 2;
-    display: none;
   }
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(30px); }
@@ -365,55 +360,32 @@
   .produto-btn { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--escuro); background: var(--laranja); border: none; padding: 10px 20px; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; }
   .produto-btn:hover { background: var(--laranja-claro); }
 
-  /* DEPOIMENTOS */
-  #depoimentos { background: var(--escuro); position: relative; overflow: hidden; }
-  .dep-bg { position: absolute; inset: 0; background: url('img/fundo-dep.jpg') center/cover; opacity: 0.04; }
-  .dep-wrap { max-width: 1000px; margin: 0 auto; padding: 0 48px; position: relative; z-index: 2; }
-  .dep-header { margin-bottom: 60px; text-align: center; }
-  .dep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .dep-card { background: var(--escuro3); border: 1px solid rgba(255,255,255,0.06); padding: 32px; }
-  .dep-stars { color: var(--laranja); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
-  .dep-text { font-size: 15px; font-weight: 300; line-height: 1.7; color: rgba(245,240,232,0.7); margin-bottom: 20px; font-style: italic; }
-  .dep-author { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--branco); }
-  .dep-local { font-size: 12px; color: rgba(245,240,232,0.4); margin-top: 2px; }
-
   /* CTA WHATSAPP */
   #contato { background: var(--laranja); padding: 80px 0; text-align: center; }
-  #contato .section-label { color: rgba(0,0,0,0.5); }
   #contato .section-title { color: var(--escuro); }
   #contato p { font-size: 18px; font-weight: 300; color: rgba(0,0,0,0.65); margin: 20px auto 40px; max-width: 500px; line-height: 1.6; }
   .whatsapp-btn { display: inline-flex; align-items: center; gap: 12px; background: var(--escuro); color: var(--branco); padding: 18px 48px; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
   .whatsapp-btn:hover { background: #1a1a1a; transform: translateY(-3px); }
-  .whatsapp-icon { font-size: 24px; }
 
   /* FLOATING WA */
   .float-wa { position: fixed; bottom: 32px; right: 32px; z-index: 5000; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 4px 24px rgba(37,211,102,0.5); text-decoration: none; animation: pulse 2s infinite; transition: transform 0.2s; }
   .float-wa:hover { transform: scale(1.1); }
   @keyframes pulse { 0%,100% { box-shadow: 0 4px 24px rgba(37,211,102,0.5); } 50% { box-shadow: 0 4px 40px rgba(37,211,102,0.8); } }
-  .float-wa-label { position: absolute; right: 72px; background: var(--escuro); color: var(--branco); padding: 8px 16px; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 1px; white-space: nowrap; opacity: 0; transform: translateX(10px); transition: all 0.3s; }
-  .float-wa:hover .float-wa-label { opacity: 1; transform: translateX(0); }
 
   /* FOOTER */
   footer { background: #050505; padding: 60px 0 32px; }
   .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
-  .footer-brand .logo { font-size: 28px; display: block; margin-bottom: 16px; }
-  .footer-brand p { font-size: 14px; font-weight: 300; color: rgba(245,240,232,0.45); line-height: 1.7; max-width: 260px; }
   .footer-col h5 { font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--laranja); margin-bottom: 20px; }
   .footer-col ul { list-style: none; }
   .footer-col ul li { margin-bottom: 12px; }
   .footer-col ul li a { font-size: 14px; font-weight: 300; color: rgba(245,240,232,0.5); text-decoration: none; transition: color 0.2s; }
   .footer-col ul li a:hover { color: var(--laranja); }
-  .footer-bottom { max-width: 1200px; margin: 40px auto 0; padding: 20px 48px 0; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; }
-  .footer-bottom p { font-size: 12px; color: rgba(245,240,232,0.3); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 2px; }
-  .social-links { display: flex; gap: 16px; }
-  .social-links a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(245,240,232,0.5); text-decoration: none; font-size: 14px; transition: all 0.2s; }
-  .social-links a:hover { border-color: var(--laranja); color: var(--laranja); }
 
   /* MODAL LIGHTBOX */
   .lightbox { display: none; position: fixed; inset: 0; z-index: 9000; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; }
   .lightbox.open { display: flex; }
-  .lightbox img, .lightbox video { max-width: 90vw; max-height: 90vh; object-fit: contain; }
-  .lightbox-close { position: absolute; top: 24px; right: 32px; font-size: 32px; color: var(--branco); cursor: pointer; background: none; border: none; font-family: 'Bebas Neue', sans-serif; letter-spacing: 2px; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+  .lightbox-close { position: absolute; top: 24px; right: 32px; font-size: 32px; color: var(--branco); cursor: pointer; background: none; border: none; font-family: 'Bebas Neue', sans-serif; }
 
   /* ANIMATE ON SCROLL */
   .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -428,34 +400,18 @@
     nav { padding: 16px 24px; }
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
-    .hero-content { padding: 0 24px 60px; }
     .sobre-grid { grid-template-columns: 1fr; padding: 0 24px; gap: 48px; }
-    .sobre-badge { display: none; }
-    .servicos-wrap, .galeria-wrap, .videos-wrap, .produtos-wrap, .dep-wrap { padding: 0 24px; }
     .servicos-grid, .videos-grid { grid-template-columns: 1fr; }
     .servico-card:first-child { grid-column: span 1; }
     .video-thumb:first-child, .video-thumb:nth-child(6) { grid-column: span 1; aspect-ratio: 16/9; }
     .galeria-grid { grid-template-columns: 1fr 1fr; }
-    .galeria-item:nth-child(1), .galeria-item:nth-child(5) { grid-column: span 1; }
     .produtos-grid { grid-template-columns: 1fr 1fr; }
-    .dep-grid { grid-template-columns: 1fr; }
     .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 24px; }
-    .footer-bottom { padding: 20px 24px 0; flex-direction: column; gap: 16px; }
-    .hero-scroll { right: 24px; }
-  }
-  @media (max-width: 600px) {
-    .produtos-grid { grid-template-columns: 1fr; }
-    .galeria-grid { grid-template-columns: 1fr; }
-    .galeria-item:nth-child(1), .galeria-item:nth-child(5) { grid-column: span 1; }
-    .footer-inner { grid-template-columns: 1fr; }
   }
 
-  /* MOBILE NAV */
   .mobile-nav { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.97); flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
   .mobile-nav.open { display: flex; }
-  .mobile-nav a { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 4px; color: var(--branco); text-decoration: none; transition: color 0.2s; }
-  .mobile-nav a:hover { color: var(--laranja); }
-  .mobile-close { position: absolute; top: 24px; right: 32px; font-size: 32px; color: var(--branco); cursor: pointer; background: none; border: none; font-family: 'Bebas Neue', sans-serif; }
+  .mobile-nav a { font-family: 'Bebas Neue', sans-serif; font-size: 48px; letter-spacing: 4px; color: var(--branco); text-decoration: none; }
 </style>
 </head>
 <body>
@@ -470,7 +426,6 @@
   <a href="#galeria" onclick="closeMobileNav()">Galeria</a>
   <a href="#videos" onclick="closeMobileNav()">Vídeos</a>
   <a href="#produtos" onclick="closeMobileNav()">Produtos</a>
-  <a href="#contato" onclick="closeMobileNav()">Contato</a>
 </div>
 
 <nav id="navbar">
@@ -482,7 +437,7 @@
     <li><a href="#videos">Vídeos</a></li>
     <li><a href="#produtos">Produtos</a></li>
   </ul>
-  <a href="https://wa.me/5511919219193?text=Olá! Vim pelo site Personal Adventure Intelligence e gostaria de mais informações." target="_blank" class="nav-cta">Fale Conosco</a>
+  <a href="https://wa.me/5511919219193" target="_blank" class="nav-cta">Fale Conosco</a>
   <div class="hamburger" onclick="document.getElementById('mobileNav').classList.add('open')">
     <span></span><span></span><span></span>
   </div>
@@ -494,83 +449,37 @@
   <div class="hero-content">
     <p class="hero-tag">Brasil · Aventura · Bem-estar</p>
     <h1 class="hero-title">Personal<br><em>Adventure</em><br>Intelligence</h1>
-    <p class="hero-sub">Tours de moto pelo Brasil, bem-estar completo e produtos exclusivos. Viva experiências que ficam na memória.</p>
+    <p class="hero-sub">Tours de moto pelo Brasil, bem-estar completo e produtos exclusivos.</p>
     <div class="hero-btns">
       <a href="#servicos" class="btn-primary">Ver Serviços</a>
       <a href="#sobre" class="btn-ghost">Sobre Mim</a>
     </div>
   </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
 </section>
 
 <div class="ticker">
-  <div class="ticker-inner" id="tickerInner">
+  <div class="ticker-inner">
     <span class="ticker-item">Tour de Moto</span><span class="ticker-dot">✦</span>
     <span class="ticker-item">Massoterapia</span><span class="ticker-dot">✦</span>
     <span class="ticker-item">Manicure</span><span class="ticker-dot">✦</span>
     <span class="ticker-item">Produtos Exclusivos</span><span class="ticker-dot">✦</span>
     <span class="ticker-item">Brasil Afora</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Bem-Estar Total</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Aventura Real</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Tour de Moto</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Massoterapia</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Manicure</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Produtos Exclusivos</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Brasil Afora</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Bem-Estar Total</span><span class="ticker-dot">✦</span>
-    <span class="ticker-item">Aventura Real</span><span class="ticker-dot">✦</span>
   </div>
 </div>
 
 <section id="sobre">
   <div class="sobre-grid">
     <div class="sobre-img-wrap reveal-left">
-      <div class="sobre-img-deco"></div>
-      <img src="img/sobre.jpg" alt="Personal Adventure" class="sobre-img">
-      <div class="sobre-img-deco2"></div>
+      <img src="sobre.jpg" alt="Personal Adventure" class="sobre-img">
       <div class="sobre-badge">
         <div class="sobre-badge-num">10+</div>
-        <div class="sobre-badge-txt">Anos de<br>Experiência</div>
+        <div class="sobre-badge-txt">Anos de<br>Exp.</div>
       </div>
     </div>
     <div class="sobre-text reveal-right">
       <p class="section-label">Quem sou eu</p>
-      <h2 class="section-title" style="margin-bottom:32px">Aventura, <em>Cuidado</em><br>e Estilo de Vida</h2>
-      <p>Sou apaixonado por aventura, bem-estar e a liberdade das estradas brasileiras. Com mais de uma década de experiência, transformo cada tour, cada tratamento e cada produto em uma experiência única e inesquecível.</p>
-      <p>Do Pantanal à Chapada Diamantina, das serras gaúchas ao litoral nordestino — levo minha paixão pelo Brasil para cada rota que traço. E quando não estou na estrada, estou cuidando do bem-estar das pessoas com toda dedicação.</p>
-      <div class="sobre-feats">
-        <div class="feat-item">
-          <span class="feat-icon">🏍️</span>
-          <div>
-            <h4>Tours pelo Brasil</h4>
-            <p>Rotas exclusivas em grupo e privadas</p>
-          </div>
-        </div>
-        <div class="feat-item">
-          <span class="feat-icon">💆</span>
-          <div>
-            <h4>Massoterapia</h4>
-            <p>Técnicas terapêuticas e relaxantes</p>
-          </div>
-        </div>
-        <div class="feat-item">
-          <span class="feat-icon">💅</span>
-          <div>
-            <h4>Manicure</h4>
-            <p>Nail art e cuidados completos</p>
-          </div>
-        </div>
-        <div class="feat-item">
-          <span class="feat-icon">📦</span>
-          <div>
-            <h4>Produtos Próprios</h4>
-            <p>Linha exclusiva curada por mim</p>
-          </div>
-        </div>
-      </div>
+      <h2 class="section-title">Aventura e <em>Cuidado</em></h2>
+      <p>Apaixonado por aventura, bem-estar e a liberdade das estradas brasileiras. Transformo cada tour e cada serviço em uma experiência única.</p>
     </div>
   </div>
 </section>
@@ -582,331 +491,55 @@
       <h2 class="section-title">Meus <em>Serviços</em></h2>
     </div>
     <div class="servicos-grid">
-
       <div class="servico-card">
-        <div class="servico-bg" style="background-image: url('img/servico-1.jpg')"></div>
-        <div class="servico-overlay"></div>
+        <div class="servico-bg" style="background-image: url('servico-1.jpg')"></div>
         <div class="servico-content">
-          <p class="servico-num">01 — Aventura</p>
-          <h3 class="servico-title">Tour de Moto pelo Brasil</h3>
-          <p class="servico-desc">Roteiros épicos pelas estradas mais belas do Brasil. Serra Gaúcha, Chapada dos Veadeiros, Lençóis Maranhenses e muito mais. Grupos pequenos, guia experiente e paisagens de tirar o fôlego.</p>
-          <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse no Tour de Moto pelo Brasil. Pode me passar mais informações?" target="_blank" class="servico-cta">Solicitar Tour →</a>
+          <h3 class="servico-title">Tour de Moto</h3>
+          <a href="https://wa.me/5511919219193" target="_blank" class="servico-cta">Saber mais →</a>
         </div>
       </div>
-
-      <div class="servico-card">
-        <div class="servico-bg" style="background-image: url('img/servico-2.jpg')"></div>
-        <div class="servico-overlay"></div>
-        <div class="servico-content">
-          <p class="servico-num">02 — Bem-estar</p>
-          <h3 class="servico-title">Massoterapia</h3>
-          <p class="servico-desc">Massagem terapêutica, relaxante, desportiva e drenagem linfática. Técnicas que aliviam tensões e restauram sua energia.</p>
-          <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse no serviço de Massoterapia. Pode me passar mais informações?" target="_blank" class="servico-cta">Agendar Sessão →</a>
-        </div>
-      </div>
-
-      <div class="servico-card">
-        <div class="servico-bg" style="background-image: url('img/servico-3.jpg')"></div>
-        <div class="servico-overlay"></div>
-        <div class="servico-content">
-          <p class="servico-num">03 — Beleza</p>
-          <h3 class="servico-title">Manicure & Nail Art</h3>
-          <p class="servico-desc">Cutilagem completa, esmaltação em gel, nail art personalizada e cuidados para as mãos. Arte nas pontas dos dedos.</p>
-          <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse no serviço de Manicure. Pode me passar mais informações?" target="_blank" class="servico-cta">Agendar Horário →</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
 <section id="galeria">
   <div class="galeria-wrap">
-    <div class="galeria-header reveal">
-      <div>
-        <p class="section-label">Momentos reais</p>
-        <h2 class="section-title">Galeria de <em>Fotos</em></h2>
-      </div>
-      <span class="add-hint" title="Espaço reservado para novas fotos">+ Adicionar Fotos</span>
-    </div>
+    <h2 class="section-title">Galeria de <em>Fotos</em></h2>
     <div class="galeria-grid">
-      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/galeria-1.jpg" alt="Tour de moto">
-        <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
-      </div>
-      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/galeria-2.jpg" alt="Massoterapia">
-        <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
-      </div>
-      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/galeria-3.jpg" alt="Manicure">
-        <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
-      </div>
-      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/galeria-4.jpg" alt="Paisagem">
-        <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
-      </div>
-      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/galeria-5.jpg" alt="Serra">
-        <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
-      </div>
-      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)">
-        <img src="img/galeria-6.jpg" alt="Estrada">
-        <div class="galeria-item-overlay"><div class="galeria-play">🔍</div></div>
-      </div>
+      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)"><img src="galeria-1.jpg"></div>
+      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)"><img src="galeria-2.jpg"></div>
+      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)"><img src="galeria-3.jpg"></div>
+      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)"><img src="galeria-4.jpg"></div>
+      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)"><img src="galeria-5.jpg"></div>
+      <div class="galeria-item" onclick="openLightbox(this.querySelector('img').src)"><img src="galeria-6.jpg"></div>
     </div>
   </div>
 </section>
 
 <section id="videos">
   <div class="videos-wrap">
-    <div class="videos-header reveal">
-      <p class="section-label">Em movimento</p>
-      <h2 class="section-title">Nossos <em>Vídeos</em></h2>
-    </div>
+    <h2 class="section-title">Nossos <em>Vídeos</em></h2>
     <div class="videos-grid">
-      
       <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/DlP5i4jLoyM')">
-        <img src="img/video-capa-1.jpg" alt="Tour Brasil" class="video-bg">
+        <img src="video-capa-1.jpg" class="video-bg">
         <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Tour pela pista de voo livre</h3>
-          <span>Tour de Moto até as montanhas· 12 min</span>
-        </div>
-      </div>
-      
-      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/DlP5i4jLoyM')">
-        <img src="img/video-capa-2.jpg" alt="Massagem" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Por do sol</h3>
-          <span>Paisagem · 5 min</span>
-        </div>
-      </div>
-      
-      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        <img src="img/video-capa-3.jpg" alt="Nail Art" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Nail Art Exclusiva</h3>
-          <span>Beleza · 4 min</span>
-        </div>
-      </div>
-      
-      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/ZBOB4KZvWaA')">
-        <img src="img/video-capa-4.jpg" alt="Off-Road" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Superando os medos</h3>
-          <span>Tour de Moto · 8 min</span>
-        </div>
-      </div>
-      
-      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        <img src="img/video-capa-5.jpg" alt="Relaxamento" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Drenagem Linfática</h3>
-          <span>Bem-Estar · 6 min</span>
-        </div>
-      </div>
-      
-      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-        <img src="img/video-capa-6.jpg" alt="Expedição Nordeste" class="video-bg">
-        <div class="video-play-btn">▶</div>
-        <div class="video-info">
-          <h3>Expedição Nordeste 2023</h3>
-          <span>Tour de Moto · 15 min</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="produtos">
-  <div class="produtos-wrap">
-    <div class="produtos-header reveal">
-      <p class="section-label">Loja Exclusiva</p>
-      <h2 class="section-title">Meus <em>Produtos</em></h2>
-    </div>
-    <div class="produtos-grid">
-
-      <div class="produto-card reveal">
-        <img src="img/produto-1.jpg" alt="Kit Tour" class="produto-img">
-        <div class="produto-badge">Mais Vendido</div>
-        <div class="produto-info">
-          <p class="produto-cat">Aventura</p>
-          <h3 class="produto-name">Kit do Motoviajante</h3>
-          <p class="produto-desc">Kit completo para quem vive a estrada: bandana, carteira slim, adesivos e guia de rotas exclusivo.</p>
-          <div class="produto-footer">
-            <span class="produto-price">R$ 189</span>
-            <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse em comprar o *Kit do Motoviajante* (R$189). Pode me dar mais informações sobre disponibilidade e entrega?" target="_blank" class="produto-btn">Comprar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="produto-card reveal" style="transition-delay:0.1s">
-        <img src="img/produto-2.jpg" alt="Óleo" class="produto-img">
-        <div class="produto-info">
-          <p class="produto-cat">Bem-estar</p>
-          <h3 class="produto-name">Óleo de Massagem Relaxante</h3>
-          <p class="produto-desc">Blend exclusivo de óleos essenciais para massagem terapêutica. Aroma incrível, pele hidratada.</p>
-          <div class="produto-footer">
-            <span class="produto-price">R$ 89</span>
-            <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse em comprar o *Óleo de Massagem Relaxante* (R$89). Pode me dar mais informações sobre disponibilidade e entrega?" target="_blank" class="produto-btn">Comprar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="produto-card reveal" style="transition-delay:0.2s">
-        <img src="img/produto-3.jpg" alt="Kit Manicure" class="produto-img">
-        <div class="produto-info">
-          <p class="produto-cat">Beleza</p>
-          <h3 class="produto-name">Kit Nail Care Premium</h3>
-          <p class="produto-desc">Tudo para cuidar das unhas em casa: base, top coat, cutícula oil e lixa profissional.</p>
-          <div class="produto-footer">
-            <span class="produto-price">R$ 129</span>
-            <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse em comprar o *Kit Nail Care Premium* (R$129). Pode me dar mais informações sobre disponibilidade e entrega?" target="_blank" class="produto-btn">Comprar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="produto-card reveal" style="transition-delay:0.3s">
-        <img src="img/produto-4.jpg" alt="Roteiro" class="produto-img">
-        <div class="produto-badge">Novo</div>
-        <div class="produto-info">
-          <p class="produto-cat">Digital</p>
-          <h3 class="produto-name">Guia de Rotas do Brasil</h3>
-          <p class="produto-desc">E-book com as 30 melhores rotas de moto do Brasil, com dicas, postos e hospedagens indicadas.</p>
-          <div class="produto-footer">
-            <span class="produto-price">R$ 49</span>
-            <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse em comprar o *Guia de Rotas do Brasil* (R$49 - E-book). Pode me dar mais informações?" target="_blank" class="produto-btn">Comprar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="produto-card reveal" style="transition-delay:0.4s">
-        <img src="img/produto-5.jpg" alt="Voucher" class="produto-img">
-        <div class="produto-info">
-          <p class="produto-cat">Presente</p>
-          <h3 class="produto-name">Voucher Sessão de Massagem</h3>
-          <p class="produto-desc">Presenteie com uma sessão completa de massoterapia. Válido por 6 meses. Inclui caixa presente.</p>
-          <div class="produto-footer">
-            <span class="produto-price">R$ 150</span>
-            <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse em comprar o *Voucher de Sessão de Massagem* (R$150). Pode me dar mais informações?" target="_blank" class="produto-btn">Comprar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="produto-card reveal" style="transition-delay:0.5s">
-        <img src="img/produto-6.jpg" alt="Camiseta" class="produto-img">
-        <div class="produto-info">
-          <p class="produto-cat">Vestuário</p>
-          <h3 class="produto-name">Camiseta PAI Exclusiva</h3>
-          <p class="produto-desc">Camiseta 100% algodão com design exclusivo Personal Adventure Intelligence. Edição limitada.</p>
-          <div class="produto-footer">
-            <span class="produto-price">R$ 79</span>
-            <a href="https://wa.me/5511919219193?text=Olá! Tenho interesse em comprar a *Camiseta PAI Exclusiva* (R$79). Pode me dar mais informações sobre tamanhos e cores disponíveis?" target="_blank" class="produto-btn">Comprar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="depoimentos">
-  <div class="dep-bg"></div>
-  <div class="dep-wrap">
-    <div class="dep-header reveal">
-      <p class="section-label">Quem viveu</p>
-      <h2 class="section-title">O que dizem <em>sobre nós</em></h2>
-    </div>
-    <div class="dep-grid">
-      <div class="dep-card reveal">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-text">"O tour pela Serra da Canastra foi simplesmente inesquecível. Organização impecável, paisagens de outro mundo e uma companhia incrível. Já me inscrevi para o próximo!"</p>
-        <p class="dep-author">Carlos Mendonça</p>
-        <p class="dep-local">São Paulo, SP</p>
-      </div>
-      <div class="dep-card reveal" style="transition-delay:0.15s">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-text">"Fiz a massoterapia e saí renovada. Técnica excelente, ambiente acolhedor. Já é minha terapia semanal obrigatória. Super recomendo a todos!"</p>
-        <p class="dep-author">Fernanda Lima</p>
-        <p class="dep-local">Rio de Janeiro, RJ</p>
-      </div>
-      <div class="dep-card reveal" style="transition-delay:0.3s">
-        <div class="dep-stars">★★★★★</div>
-        <p class="dep-text">"Manicure top demais! Nail art personalizada que ficou perfeita. Muito cuidado e capricho em cada detalhe. Minha manicure preferida sem dúvida."</p>
-        <p class="dep-author">Juliana Martins</p>
-        <p class="dep-local">Curitiba, PR</p>
       </div>
     </div>
   </div>
 </section>
 
 <section id="contato">
-  <p class="section-label">Fale comigo</p>
   <h2 class="section-title">Pronto para a sua<br><em>próxima aventura?</em></h2>
-  <p>Tire suas dúvidas, faça seu agendamento ou encomende produtos. Estou aqui para te atender pelo WhatsApp.</p>
-  <a href="https://wa.me/5511919219193?text=Olá! Vim pelo site Personal Adventure Intelligence e gostaria de mais informações." target="_blank" class="whatsapp-btn">
-    <span class="whatsapp-icon">💬</span>
-    Chamar no WhatsApp
-  </a>
+  <a href="https://wa.me/5511919219193" target="_blank" class="whatsapp-btn">Chamar no WhatsApp</a>
 </section>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <a href="#hero" class="logo">PAI<span>.</span></a>
-      <p>Personal Adventure Intelligence — aventura, bem-estar e produtos exclusivos no Brasil.</p>
-    </div>
-    <div class="footer-col">
-      <h5>Serviços</h5>
-      <ul>
-        <li><a href="#servicos">Tour de Moto</a></li>
-        <li><a href="#servicos">Massoterapia</a></li>
-        <li><a href="#servicos">Manicure</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Explorar</h5>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#galeria">Galeria</a></li>
-        <li><a href="#videos">Vídeos</a></li>
-        <li><a href="#produtos">Produtos</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Contato</h5>
-      <ul>
-        <li><a href="https://wa.me/5511919219193" target="_blank">+55 11 91921-9193</a></li>
-        <li><a href="https://www.instagram.com/personaladventure/" target="_blank">@personaladventure</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Personal Adventure Intelligence — Todos os direitos reservados</p>
-    <div class="social-links">
-      <a href="https://www.instagram.com/personaladventure/" target="_blank" title="Instagram">ig</a>
-      <a href="https://wa.me/5511919219193" target="_blank" title="WhatsApp">wa</a>
-    </div>
-  </div>
-</footer>
-
-<a href="https://wa.me/5511919219193?text=Olá! Vim pelo site Personal Adventure Intelligence e gostaria de mais informações." target="_blank" class="float-wa" title="Fale pelo WhatsApp">
-  <span class="float-wa-label">Fale comigo!</span>
-  💬
-</a>
-
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">✕ FECHAR</button>
-  <img id="lightboxImg" src="" alt="">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightboxImg" src="">
 </div>
 
 <div class="lightbox" id="videoModal">
-  <button class="lightbox-close" onclick="closeVideoModal()">✕ FECHAR</button>
+  <button class="lightbox-close" onclick="closeVideoModal()">✕</button>
   <iframe id="videoFrame" width="900" height="506" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="max-width:90vw;max-height:80vh"></iframe>
 </div>
 
@@ -917,68 +550,35 @@ const ring = document.getElementById('cursorRing');
 let mx = 0, my = 0, rx = 0, ry = 0;
 document.addEventListener('mousemove', e => {
   mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx - 6 + 'px';
-  cursor.style.top = my - 6 + 'px';
+  cursor.style.left = mx - 6 + 'px'; cursor.style.top = my - 6 + 'px';
 });
 function animRing() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  ring.style.left = rx - 18 + 'px';
-  ring.style.top = ry - 18 + 'px';
+  rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+  ring.style.left = rx - 18 + 'px'; ring.style.top = ry - 18 + 'px';
   requestAnimationFrame(animRing);
 }
 animRing();
-document.querySelectorAll('a,button,.produto-card,.servico-card,.galeria-item,.video-thumb').forEach(el => {
-  el.addEventListener('mouseenter', () => { cursor.style.transform = 'scale(2)'; ring.style.transform = 'scale(1.5)'; });
-  el.addEventListener('mouseleave', () => { cursor.style.transform = 'scale(1)'; ring.style.transform = 'scale(1)'; });
-});
 
 // NAV SCROLL
-const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 60);
+  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// MOBILE NAV
 function closeMobileNav() { document.getElementById('mobileNav').classList.remove('open'); }
 
-// REVEAL ON SCROLL
-const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+// REVEAL
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.12 });
-reveals.forEach(r => observer.observe(r));
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(r => observer.observe(r));
 
 // LIGHTBOX
-function openLightbox(src) {
-  document.getElementById('lightboxImg').src = src;
-  document.getElementById('lightbox').classList.add('open');
-}
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-  document.getElementById('lightboxImg').src = '';
-}
-document.getElementById('lightbox').addEventListener('click', function(e) {
-  if (e.target === this) closeLightbox();
-});
+function openLightbox(src) { document.getElementById('lightboxImg').src = src; document.getElementById('lightbox').classList.add('open'); }
+function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
 
-// VIDEO MODAL
-function openVideoModal(url) {
-  document.getElementById('videoFrame').src = url + '?autoplay=1';
-  document.getElementById('videoModal').classList.add('open');
-}
-function closeVideoModal() {
-  document.getElementById('videoModal').classList.remove('open');
-  document.getElementById('videoFrame').src = '';
-}
-document.getElementById('videoModal').addEventListener('click', function(e) {
-  if (e.target === this) closeVideoModal();
-});
-
-// ESC key
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeLightbox(); closeVideoModal(); }
-});
+// VIDEO
+function openVideoModal(url) { document.getElementById('videoFrame').src = url + '?autoplay=1'; document.getElementById('videoModal').classList.add('open'); }
+function closeVideoModal() { document.getElementById('videoModal').classList.remove('open'); document.getElementById('videoFrame').src = ''; }
 </script>
 </body>
 </html>
