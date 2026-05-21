@@ -25,7 +25,7 @@
     background: var(--escuro);
     color: var(--branco);
     overflow-x: hidden;
-    cursor: none; /* Esconde o mouse padrão para usar o personalizado */
+    cursor: none;
   }
 
   /* CURSOR PERSONALIZADO */
@@ -164,7 +164,7 @@
   }
   .btn-ghost:hover { border-color: var(--laranja); color: var(--laranja); }
 
-  /* TICKER */
+  /* TICKER (Letreiro) */
   .ticker { background: var(--laranja); padding: 15px 0; overflow: hidden; white-space: nowrap; }
   .ticker-inner { display: inline-flex; gap: 60px; animation: ticker 30s linear infinite; }
   .ticker-item {
@@ -173,21 +173,8 @@
   }
   @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-  /* SEÇÕES GERAIS */
-  section { padding: 120px 48px; }
-  .section-label {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 11px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase;
-    color: var(--laranja); margin-bottom: 20px; display: block;
-  }
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: 2px; color: var(--branco);
-  }
-  .section-title em { color: var(--laranja); font-style: normal; }
-
   /* SOBRE */
-  #sobre { background: var(--escuro2); }
+  #sobre { background: var(--escuro2); padding: 120px 48px; }
   .sobre-grid {
     max-width: 1200px; margin: 0 auto;
     display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: center;
@@ -199,79 +186,73 @@
     background: var(--laranja); padding: 30px; color: var(--escuro);
   }
   .sobre-badge-num { font-family: 'Bebas Neue', sans-serif; font-size: 56px; line-height: 1; }
-  .sobre-text p { font-size: 18px; font-weight: 300; line-height: 1.8; color: rgba(245,240,232,0.7); margin-bottom: 30px; }
+  .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--laranja); margin-bottom: 20px; display: block; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: 2px; color: var(--branco); margin-bottom: 30px;}
+  .section-title em { color: var(--laranja); font-style: normal; }
+  .sobre-text p { font-size: 18px; font-weight: 300; line-height: 1.8; color: rgba(245,240,232,0.7); margin-bottom: 20px; }
 
-  /* SERVIÇOS GRID */
-  #servicos { background: var(--escuro); }
-  .servicos-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 60px auto 0;
-  }
-  .servico-card {
-    background: var(--escuro3); padding: 40px; position: relative; overflow: hidden;
-    transition: transform 0.3s; border-bottom: 2px solid transparent;
-  }
+  /* SERVIÇOS */
+  #servicos { background: var(--escuro); padding: 120px 48px; }
+  .servicos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 60px auto 0; }
+  .servico-card { background: var(--escuro3); padding: 40px; position: relative; overflow: hidden; transition: transform 0.3s; border-bottom: 2px solid transparent; }
   .servico-card:hover { transform: translateY(-10px); border-color: var(--laranja); }
   .servico-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 28px; margin-bottom: 15px; }
   .servico-card p { font-size: 15px; color: rgba(245,240,232,0.6); line-height: 1.6; }
 
   /* GALERIA */
-  #galeria { background: var(--escuro2); padding-inline: 0; }
+  #galeria { background: var(--escuro2); padding: 0; }
   .galeria-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
   .galeria-item { aspect-ratio: 1; overflow: hidden; cursor: pointer; position: relative; }
   .galeria-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; filter: grayscale(0.5); }
   .galeria-item:hover img { transform: scale(1.1); filter: grayscale(0); }
 
   /* VÍDEOS */
-  #videos { background: var(--escuro); }
-  .video-container {
-    max-width: 1000px; margin: 60px auto; position: relative; aspect-ratio: 16/9;
-    cursor: pointer; overflow: hidden;
-  }
-  .video-container img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.6); }
-  .play-btn {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: 80px; height: 80px; border: 2px solid var(--laranja); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; color: var(--laranja); font-size: 24px;
-  }
+  #videos { background: var(--escuro); padding: 120px 48px; }
+  .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 60px auto; }
+  .video-thumb { position: relative; aspect-ratio: 16/9; cursor: pointer; overflow: hidden; background: #000; }
+  .video-thumb img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: 0.3s; }
+  .video-thumb:hover img { opacity: 0.8; transform: scale(1.05); }
+  .play-mini { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: var(--laranja); font-size: 40px; }
 
   /* PRODUTOS */
-  #produtos { background: var(--escuro2); }
-  .produtos-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 60px auto 0;
-  }
-  .prod-card { background: var(--escuro3); padding: 20px; text-align: center; }
+  #produtos { background: var(--escuro2); padding: 120px 48px; }
+  .produtos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1200px; margin: 60px auto 0; }
+  .prod-card { background: var(--escuro3); padding: 30px; text-align: center; transition: 0.3s; }
+  .prod-card:hover { transform: translateY(-5px); }
   .prod-img { width: 100%; aspect-ratio: 1; background: var(--cinza); margin-bottom: 20px; object-fit: cover; }
   .prod-name { font-family: 'Bebas Neue', sans-serif; font-size: 24px; margin-bottom: 10px; }
-  .prod-price { color: var(--laranja); font-weight: 700; font-size: 20px; }
+  .prod-price { color: var(--laranja); font-weight: 700; font-size: 22px; margin-bottom: 20px; display: block; }
+  .buy-btn { background: var(--laranja); color: var(--escuro); padding: 12px 20px; text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 12px; }
 
-  /* FOOTER & CTAs */
-  #contato { background: var(--laranja); text-align: center; color: var(--escuro); }
-  .wa-btn {
-    display: inline-block; margin-top: 30px; background: var(--escuro); color: var(--branco);
-    padding: 20px 50px; text-decoration: none; font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+  /* WHATSAPP FLUTUANTE */
+  .float-wa {
+    position: fixed; bottom: 30px; right: 30px; z-index: 1000;
+    width: 60px; height: 60px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); text-decoration: none; color: white; font-size: 30px;
   }
-  footer { padding: 60px 48px; background: #050505; text-align: center; font-size: 13px; color: rgba(245,240,232,0.4); }
 
-  /* REVEAL ANIMATION */
+  /* FOOTER */
+  footer { padding: 80px 48px; background: #050505; text-align: center; color: rgba(245,240,232,0.3); font-size: 13px; }
+
+  /* ANIMAÇÕES */
   .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-left { opacity: 0; transform: translateX(-50px); transition: 0.8s all ease; }
+  .reveal-right { opacity: 0; transform: translateX(50px); transition: 0.8s all ease; }
+  .visible { opacity: 1; transform: translate(0); }
 
-  /* RESPONSIVO */
-  @media (max-width: 900px) {
-    nav { padding: 20px; }
-    .nav-links { display: none; }
-    .sobre-grid, .servicos-grid, .produtos-grid { grid-template-columns: 1fr; gap: 50px; }
-    .galeria-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
   /* MODAL */
-  .modal {
-    display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.95);
-    align-items: center; justify-content: center; padding: 40px;
-  }
+  .modal { display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; padding: 40px; }
   .modal.open { display: flex; }
   .modal-close { position: absolute; top: 30px; right: 30px; color: white; font-size: 30px; cursor: pointer; }
+
+  @media (max-width: 900px) {
+    .nav-links, .nav-cta { display: none; }
+    .sobre-grid, .servicos-grid, .produtos-grid, .videos-grid { grid-template-columns: 1fr; }
+    .galeria-grid { grid-template-columns: repeat(2, 1fr); }
+  }
 </style>
 </head>
 <body>
@@ -300,7 +281,7 @@
     <p class="hero-sub">Experiências exclusivas de tour de moto pelo Brasil combinadas com serviços premium de massoterapia e autocuidado.</p>
     <div class="hero-btns">
       <a href="#servicos" class="btn-primary">Explorar Serviços</a>
-      <a href="#contato" class="btn-ghost">Agendar Agora</a>
+      <a href="#produtos" class="btn-ghost">Ver Loja</a>
     </div>
   </div>
 </section>
@@ -309,51 +290,50 @@
   <div class="ticker-inner">
     <span class="ticker-item">✦ Moto Tours Brasil</span>
     <span class="ticker-item">✦ Massoterapia Premium</span>
-    <span class="ticker-item">✦ Manicure Masculina/Feminina</span>
+    <span class="ticker-item">✦ Manicure Profissional</span>
     <span class="ticker-item">✦ Produtos Exclusivos</span>
-    <span class="ticker-item">✦ Experiência Personalizada</span>
+    <span class="ticker-item">✦ Roteiros Personalizados</span>
     <span class="ticker-item">✦ Moto Tours Brasil</span>
     <span class="ticker-item">✦ Massoterapia Premium</span>
-    <span class="ticker-item">✦ Manicure Masculina/Feminina</span>
-    <span class="ticker-item">✦ Produtos Exclusivos</span>
+    <span class="ticker-item">✦ Manicure Profissional</span>
   </div>
 </div>
 
 <section id="sobre">
   <div class="sobre-grid">
-    <div class="sobre-img-wrap reveal">
-      <img src="sobre.jpg" alt="Personal" class="sobre-img">
+    <div class="sobre-img-wrap reveal-left">
+      <img src="sobre.jpg" alt="Aventura" class="sobre-img">
       <div class="sobre-badge">
         <div class="sobre-badge-num">10+</div>
-        <div style="font-size:12px; text-transform:uppercase; letter-spacing:2px">Anos de<br>Experiência</div>
+        <div style="font-size:12px; text-transform:uppercase; letter-spacing:2px">Anos de<br>Estrada</div>
       </div>
     </div>
-    <div class="sobre-text reveal">
+    <div class="sobre-text reveal-right">
       <span class="section-label">A Mente por trás</span>
       <h2 class="section-title">EQUILÍBRIO ENTRE<br><em>ADRENALINA E PAZ</em></h2>
-      <p>Com mais de uma década unindo a paixão pelas estradas e o cuidado minucioso com o corpo, criei a Personal Adventure Intelligence. Nosso objetivo é proporcionar não apenas uma viagem, mas uma transformação completa.</p>
-      <p>Seja explorando as paisagens mais incríveis do Brasil sobre duas rodas ou relaxando com nossos tratamentos terapêuticos exclusivos, cada detalhe é planejado para o seu máximo conforto.</p>
+      <p>Com mais de uma década unindo a paixão pelas estradas e o cuidado minucioso com o corpo, criei a Personal Adventure Intelligence.</p>
+      <p>Seja explorando as paisagens mais incríveis do Brasil sobre duas rodas ou relaxando com nossos tratamentos terapêuticos exclusivos, cada detalhe é planejado para sua transformação.</p>
     </div>
   </div>
 </section>
 
 <section id="servicos">
   <div style="text-align: center" class="reveal">
-    <span class="section-label">O que fazemos</span>
+    <span class="section-label">O que oferecemos</span>
     <h2 class="section-title">SERVIÇOS <em>PREMIUM</em></h2>
   </div>
   <div class="servicos-grid">
     <div class="servico-card reveal">
       <h3>01. Moto Tours</h3>
-      <p>Roteiros personalizados pelas melhores estradas do Brasil, com suporte total e experiências gastronômicas.</p>
+      <p>Roteiros épicos pelas melhores estradas do Brasil com suporte total.</p>
     </div>
-    <div class="servico-card reveal">
+    <div class="servico-card reveal" style="transition-delay: 0.1s">
       <h3>02. Massoterapia</h3>
-      <p>Tratamentos profundos para recuperação muscular e relaxamento mental após grandes jornadas.</p>
+      <p>Recuperação muscular e relaxamento profundo após grandes jornadas.</p>
     </div>
-    <div class="servico-card reveal">
-      <h3>03. Manicure Profissional</h3>
-      <p>Cuidado estético e saúde das mãos com acabamento impecável para todos os públicos.</p>
+    <div class="servico-card reveal" style="transition-delay: 0.2s">
+      <h3>03. Manicure</h3>
+      <p>Cuidado estético e saúde das mãos com acabamento impecável.</p>
     </div>
   </div>
 </section>
@@ -364,21 +344,27 @@
     <div class="galeria-item" onclick="openLightbox('galeria-2.jpg')"><img src="galeria-2.jpg"></div>
     <div class="galeria-item" onclick="openLightbox('galeria-3.jpg')"><img src="galeria-3.jpg"></div>
     <div class="galeria-item" onclick="openLightbox('galeria-4.jpg')"><img src="galeria-4.jpg"></div>
-    <div class="galeria-item" onclick="openLightbox('galeria-5.jpg')"><img src="galeria-5.jpg"></div>
-    <div class="galeria-item" onclick="openLightbox('galeria-6.jpg')"><img src="galeria-6.jpg"></div>
-    <div class="galeria-item" onclick="openLightbox('capa.jpg')"><img src="capa.jpg"></div>
-    <div class="galeria-item" onclick="openLightbox('sobre.jpg')"><img src="sobre.jpg"></div>
   </div>
 </section>
 
 <section id="videos">
   <div style="text-align: center" class="reveal">
-    <span class="section-label">Aventura em Movimento</span>
-    <h2 class="section-title">ASSISTA ÀS <em>JORNADAS</em></h2>
+    <span class="section-label">Nossas Jornadas</span>
+    <h2 class="section-title">VÍDEOS <em>EM DESTAQUE</em></h2>
   </div>
-  <div class="video-container reveal" onclick="openVideo('https://www.youtube.com/embed/DlP5i4jLoyM')">
-    <img src="video-capa-1.jpg" alt="Thumbnail">
-    <div class="play-btn">▶</div>
+  <div class="videos-grid">
+    <div class="video-thumb reveal" onclick="openVideo('https://www.youtube.com/embed/DlP5i4jLoyM')">
+      <img src="galeria-1.jpg">
+      <div class="play-mini">▶</div>
+    </div>
+    <div class="video-thumb reveal" style="transition-delay: 0.1s" onclick="openVideo('https://www.youtube.com/embed/DlP5i4jLoyM')">
+      <img src="galeria-2.jpg">
+      <div class="play-mini">▶</div>
+    </div>
+    <div class="video-thumb reveal" style="transition-delay: 0.2s" onclick="openVideo('https://www.youtube.com/embed/DlP5i4jLoyM')">
+      <img src="galeria-3.jpg">
+      <div class="play-mini">▶</div>
+    </div>
   </div>
 </section>
 
@@ -390,33 +376,48 @@
   <div class="produtos-grid">
     <div class="prod-card reveal">
       <div class="prod-img"></div>
-      <h4 class="prod-name">Camiseta Adventure</h4>
-      <p class="prod-price">R$ 129,00</p>
+      <h4 class="prod-name">Kit do Motoviajante</h4>
+      <span class="prod-price">R$ 189,00</span>
+      <a href="https://wa.me/5511919219193" class="buy-btn">Comprar</a>
+    </div>
+    <div class="prod-card reveal" style="transition-delay: 0.1s">
+      <div class="prod-img"></div>
+      <h4 class="prod-name">Óleo Relaxante</h4>
+      <span class="prod-price">R$ 89,00</span>
+      <a href="https://wa.me/5511919219193" class="buy-btn">Comprar</a>
+    </div>
+    <div class="prod-card reveal" style="transition-delay: 0.2s">
+      <div class="prod-img"></div>
+      <h4 class="prod-name">Kit Nail Care</h4>
+      <span class="prod-price">R$ 129,00</span>
+      <a href="https://wa.me/5511919219193" class="buy-btn">Comprar</a>
     </div>
     <div class="prod-card reveal">
       <div class="prod-img"></div>
-      <h4 class="prod-name">Óleo Terapêutico</h4>
-      <p class="prod-price">R$ 89,00</p>
+      <h4 class="prod-name">Guia de Rotas</h4>
+      <span class="prod-price">R$ 49,00</span>
+      <a href="https://wa.me/5511919219193" class="buy-btn">Comprar</a>
     </div>
-    <div class="prod-card reveal">
+    <div class="prod-card reveal" style="transition-delay: 0.1s">
       <div class="prod-img"></div>
-      <h4 class="prod-name">Luvas de Couro</h4>
-      <p class="prod-price">R$ 249,00</p>
+      <h4 class="prod-name">Voucher Massagem</h4>
+      <span class="prod-price">R$ 150,00</span>
+      <a href="https://wa.me/5511919219193" class="buy-btn">Comprar</a>
     </div>
-  </div>
-</section>
-
-<section id="contato">
-  <div class="reveal">
-    <h2 class="section-title" style="color:black">VAMOS COMEÇAR<br>ESSA <em>HISTÓRIA?</em></h2>
-    <p style="color:black; margin-top:20px; opacity:0.8">Clique no botão abaixo para conversar diretamente conosco via WhatsApp.</p>
-    <a href="https://wa.me/5511919219193" target="_blank" class="wa-btn">Chamar no WhatsApp</a>
+    <div class="prod-card reveal" style="transition-delay: 0.2s">
+      <div class="prod-img"></div>
+      <h4 class="prod-name">Camiseta PAI</h4>
+      <span class="prod-price">R$ 79,00</span>
+      <a href="https://wa.me/5511919219193" class="buy-btn">Comprar</a>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 2024 Personal Adventure Intelligence. Todos os direitos reservados.<br>Design by Luxury Digital</p>
+  <p>© 2024 Personal Adventure Intelligence. Todos os direitos reservados.</p>
 </footer>
+
+<a href="https://wa.me/5511919219193" target="_blank" class="float-wa">💬</a>
 
 <div class="modal" id="modal">
   <span class="modal-close" onclick="closeModal()">✕</span>
@@ -424,22 +425,18 @@
 </div>
 
 <script>
-  // CURSOR LOGIC
+  // CURSOR
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx = 0, my = 0, rx = 0, ry = 0;
-
   document.addEventListener('mousemove', e => {
     mx = e.clientX; my = e.clientY;
     cursor.style.left = mx - 6 + 'px';
     cursor.style.top = my - 6 + 'px';
   });
-
   function animateRing() {
-    rx += (mx - rx) * 0.15;
-    ry += (my - ry) * 0.15;
-    ring.style.left = rx - 18 + 'px';
-    ring.style.top = ry - 18 + 'px';
+    rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15;
+    ring.style.left = rx - 18 + 'px'; ring.style.top = ry - 18 + 'px';
     requestAnimationFrame(animateRing);
   }
   animateRing();
@@ -449,30 +446,24 @@
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
   });
 
-  // REVEAL ON SCROLL
+  // REVEAL ANIMATIONS
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 
-  // MODAL FUNCTIONS
+  // MODAL (VÍDEO/FOTO)
   const modal = document.getElementById('modal');
   const content = document.getElementById('modalContent');
-
   function openLightbox(imgSrc) {
     content.innerHTML = `<img src="${imgSrc}" style="max-width:100%; max-height:80vh; object-fit:contain">`;
     modal.classList.add('open');
   }
-
   function openVideo(url) {
-    content.innerHTML = `<iframe width="100%" height="500" src="${url}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+    content.innerHTML = `<iframe width="100%" height="500" src="${url}?autoplay=1" frameborder="0" allowfullscreen></iframe>`;
     modal.classList.add('open');
   }
-
-  function closeModal() {
-    modal.classList.remove('open');
-    content.innerHTML = '';
-  }
+  function closeModal() { modal.classList.remove('open'); content.innerHTML = ''; }
 </script>
 
 </body>
