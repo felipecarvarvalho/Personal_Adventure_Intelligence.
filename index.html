@@ -457,7 +457,8 @@
     aspect-ratio: 16/9; cursor: pointer;
     background: var(--cinza);
   }
-  .video-thumb:first-child { grid-column: span 2; aspect-ratio: 21/9; }
+  /* O 1º e o 6º vídeo ocupam a largura total para fechar a grelha de forma simétrica */
+  .video-thumb:first-child, .video-thumb:nth-child(6) { grid-column: span 2; aspect-ratio: 21/9; }
   .video-bg {
     width: 100%; height: 100%;
     object-fit: cover;
@@ -757,7 +758,10 @@
     .servicos-wrap, .galeria-wrap, .videos-wrap, .produtos-wrap, .dep-wrap { padding: 0 24px; }
     .servicos-grid, .videos-grid { grid-template-columns: 1fr; }
     .servico-card:first-child { grid-column: span 1; }
-    .video-thumb:first-child { grid-column: span 1; }
+    
+    /* Na versão mobile (telemóvel), todos os vídeos ocupam a largura normal */
+    .video-thumb:first-child, .video-thumb:nth-child(6) { grid-column: span 1; aspect-ratio: 16/9; }
+    
     .galeria-grid { grid-template-columns: 1fr 1fr; }
     .galeria-item:nth-child(1), .galeria-item:nth-child(5) { grid-column: span 1; }
     .produtos-grid { grid-template-columns: 1fr 1fr; }
@@ -797,11 +801,9 @@
 </head>
 <body>
 
-<!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- MOBILE NAV OVERLAY -->
 <div class="mobile-nav" id="mobileNav">
   <button class="mobile-close" onclick="closeMobileNav()">✕ FECHAR</button>
   <a href="#sobre" onclick="closeMobileNav()">Sobre</a>
@@ -812,7 +814,6 @@
   <a href="#contato" onclick="closeMobileNav()">Contato</a>
 </div>
 
-<!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="logo">Personal<span>.</span>Adventure<br><span style="font-size:14px;letter-spacing:8px;color:rgba(245,240,232,0.5)">INTELLIGENCE</span></a>
   <ul class="nav-links">
@@ -828,7 +829,6 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
@@ -847,7 +847,6 @@
   </div>
 </section>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-inner" id="tickerInner">
     <span class="ticker-item">Tour de Moto</span><span class="ticker-dot">✦</span>
@@ -867,7 +866,6 @@
   </div>
 </div>
 
-<!-- SOBRE -->
 <section id="sobre">
   <div class="sobre-grid">
     <div class="sobre-img-wrap reveal-left">
@@ -918,7 +916,6 @@
   </div>
 </section>
 
-<!-- SERVIÇOS -->
 <section id="servicos">
   <div class="servicos-wrap">
     <div class="servicos-header reveal">
@@ -964,7 +961,6 @@
   </div>
 </section>
 
-<!-- GALERIA -->
 <section id="galeria">
   <div class="galeria-wrap">
     <div class="galeria-header reveal">
@@ -1003,7 +999,6 @@
   </div>
 </section>
 
-<!-- VIDEOS -->
 <section id="videos">
   <div class="videos-wrap">
     <div class="videos-header reveal">
@@ -1019,6 +1014,7 @@
           <span>Tour de Moto · 12 min</span>
         </div>
       </div>
+      
       <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
         <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&q=80" alt="Massagem" class="video-bg">
         <div class="video-play-btn">▶</div>
@@ -1027,6 +1023,7 @@
           <span>Bem-Estar · 5 min</span>
         </div>
       </div>
+      
       <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
         <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=80" alt="Nail Art" class="video-bg">
         <div class="video-play-btn">▶</div>
@@ -1035,12 +1032,37 @@
           <span>Beleza · 4 min</span>
         </div>
       </div>
+      
+      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=700&q=80" alt="Off-Road" class="video-bg">
+        <div class="video-play-btn">▶</div>
+        <div class="video-info">
+          <h3>Aventura Off-Road</h3>
+          <span>Tour de Moto · 8 min</span>
+        </div>
+      </div>
+      
+      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=700&q=80" alt="Relaxamento" class="video-bg">
+        <div class="video-play-btn">▶</div>
+        <div class="video-info">
+          <h3>Drenagem Linfática</h3>
+          <span>Bem-Estar · 6 min</span>
+        </div>
+      </div>
+      
+      <div class="video-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80" alt="Expedição Nordeste" class="video-bg">
+        <div class="video-play-btn">▶</div>
+        <div class="video-info">
+          <h3>Expedição Nordeste 2023</h3>
+          <span>Tour de Moto · 15 min</span>
+        </div>
+      </div>
     </div>
-    <p style="margin-top:24px; font-family:'Barlow Condensed',sans-serif; font-size:12px; letter-spacing:3px; color:rgba(245,240,232,0.3); text-transform:uppercase;">— Espaço para novos vídeos futuros —</p>
   </div>
 </section>
 
-<!-- PRODUTOS -->
 <section id="produtos">
   <div class="produtos-wrap">
     <div class="produtos-header reveal">
@@ -1133,7 +1155,6 @@
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
 <section id="depoimentos">
   <div class="dep-bg"></div>
   <div class="dep-wrap">
@@ -1164,7 +1185,6 @@
   </div>
 </section>
 
-<!-- CTA CONTATO -->
 <section id="contato">
   <p class="section-label">Fale comigo</p>
   <h2 class="section-title">Pronto para a sua<br><em>próxima aventura?</em></h2>
@@ -1175,7 +1195,6 @@
   </a>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1216,19 +1235,16 @@
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <a href="https://wa.me/5511919219193?text=Olá! Vim pelo site Personal Adventure Intelligence e gostaria de mais informações." target="_blank" class="float-wa" title="Fale pelo WhatsApp">
   <span class="float-wa-label">Fale comigo!</span>
   💬
 </a>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">✕ FECHAR</button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
-<!-- VIDEO MODAL -->
 <div class="lightbox" id="videoModal">
   <button class="lightbox-close" onclick="closeVideoModal()">✕ FECHAR</button>
   <iframe id="videoFrame" width="900" height="506" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="max-width:90vw;max-height:80vh"></iframe>
